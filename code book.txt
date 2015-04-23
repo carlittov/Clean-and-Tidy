@@ -1,0 +1,115 @@
+1 - the first transformation is done to the features data once read
+only the labels were of interest
+feature variable contained a transposed result of the feature labels (column 2) making 1 column per label
+
+2 - based on the value from the activity files (train + test)  that value is used as an index for the activity label
+
+3 - use grepl function to create a logical vector from features for column names including std and mean
+
+4 - reduce the number of columns of the main data (train + test) using the logical vector from step 3
+
+5 - add activity subject and source columns to the main data (train + test) 
+
+6 - combine train and test data sets
+
+7 - create a second data set from the output of step 6 group the data by activity, subject and source 
+the mean of the remaining columns performed
+
+Activity				6
+				Activity-label
+						1 Walking
+						2 Walking Upstairs
+						3 Walking Downstairs
+						4 Sitting
+						5 Standing
+						6 Laying
+
+Subject				30
+				Subjest Id
+						Id of person performing an activity
+						
+Source				2
+				Source Name
+						1 Train
+						2 Test
+						
+Remaining columns are doubles with the following header names:
+				tBodyAcc-mean()-X
+				tBodyAcc-mean()-Y
+				tBodyAcc-mean()-Z
+				tBodyAcc-std()-X
+				tBodyAcc-std()-Y
+				tBodyAcc-std()-Z
+				tGravityAcc-mean()-X
+				tGravityAcc-mean()-Y
+				tGravityAcc-mean()-Z
+				tGravityAcc-std()-X
+				tGravityAcc-std()-Y
+				tGravityAcc-std()-Z
+				tBodyAccJerk-mean()-X
+				tBodyAccJerk-mean()-Y
+				tBodyAccJerk-mean()-Z
+				tBodyAccJerk-std()-X
+				tBodyAccJerk-std()-Y
+				tBodyAccJerk-std()-Z
+				tBodyGyro-mean()-X
+				tBodyGyro-mean()-Y
+				tBodyGyro-mean()-Z
+				tBodyGyro-std()-X
+				tBodyGyro-std()-Y
+				tBodyGyro-std()-Z
+				tBodyGyroJerk-mean()-X
+				tBodyGyroJerk-mean()-Y
+				tBodyGyroJerk-mean()-Z
+				tBodyGyroJerk-std()-X
+				tBodyGyroJerk-std()-Y
+				tBodyGyroJerk-std()-Z
+				tBodyAccMag-mean()
+				tBodyAccMag-std()
+				tGravityAccMag-mean()
+				tGravityAccMag-std()
+				tBodyAccJerkMag-mean()
+				tBodyAccJerkMag-std()
+				tBodyGyroMag-mean()
+				tBodyGyroMag-std()
+				tBodyGyroJerkMag-mean()
+				tBodyGyroJerkMag-std()
+				fBodyAcc-mean()-X
+				fBodyAcc-mean()-Y
+				fBodyAcc-mean()-Z
+				fBodyAcc-std()-X
+				fBodyAcc-std()-Y
+				fBodyAcc-std()-Z
+				fBodyAcc-meanFreq()-X
+				fBodyAcc-meanFreq()-Y
+				fBodyAcc-meanFreq()-Z
+				fBodyAccJerk-mean()-X
+				fBodyAccJerk-mean()-Y
+				fBodyAccJerk-mean()-Z
+				fBodyAccJerk-std()-X
+				fBodyAccJerk-std()-Y
+				fBodyAccJerk-std()-Z
+				fBodyAccJerk-meanFreq()-X
+				fBodyAccJerk-meanFreq()-Y
+				fBodyAccJerk-meanFreq()-Z
+				fBodyGyro-mean()-X
+				fBodyGyro-mean()-Y
+				fBodyGyro-mean()-Z
+				fBodyGyro-std()-X
+				fBodyGyro-std()-Y
+				fBodyGyro-std()-Z
+				fBodyGyro-meanFreq()-X
+				fBodyGyro-meanFreq()-Y
+				fBodyGyro-meanFreq()-Z
+				fBodyAccMag-mean()
+				fBodyAccMag-std()
+				fBodyAccMag-meanFreq()
+				fBodyBodyAccJerkMag-mean()
+				fBodyBodyAccJerkMag-std()
+				fBodyBodyAccJerkMag-meanFreq()
+				fBodyBodyGyroMag-mean()
+				fBodyBodyGyroMag-std()
+				fBodyBodyGyroMag-meanFreq()
+				fBodyBodyGyroJerkMag-mean()
+				fBodyBodyGyroJerkMag-std()
+				fBodyBodyGyroJerkMag-meanFreq()
